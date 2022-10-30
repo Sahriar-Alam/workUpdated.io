@@ -1,0 +1,297 @@
+.hero_section {
+  padding-top: 80px;
+  position: relative;
+}
+.hero_section .hero_content {
+  display: flex;
+  width: 100%;
+}
+.hero_left,
+.hero_right {
+  width: 50%;
+}
+.title_one {
+  display: flex;
+  align-items: center;
+}
+.title_one h4 {
+  font-weight: 400;
+  font-size: 24px;
+  color: #353535;
+}
+
+.hand {
+  padding-left: 10px;
+  animation: left-right alternate-reverse 0.8s infinite;
+  display: flex;
+}
+@keyframes left-right {
+  0% {
+    transform: rotate(-55deg);
+  }
+  100% {
+    transform: rotate(-35deg);
+  }
+}
+.title_two h1 {
+  font-weight: 700;
+  font-size: 64px;
+  color: #353535;
+  padding-top: 13px;
+  padding-bottom: 25px;
+  font-family: var(--font02);
+  line-height: 75px;
+}
+.my_desc p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #353535;
+  padding-bottom: 65px;
+}
+.social_links {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.social_link a {
+  background: #f4f3f3;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.social_link {
+  display: flex;
+  gap: 20px;
+}
+
+.social_links h4 {
+  font-weight: 500;
+  font-size: 22px;
+  color: #353535;
+  padding-right: 35px;
+}
+
+.header_btns a,
+.btn_two a,
+.section_contents_s .btn_two a {
+  display: flex;
+  align-items: center;
+  width: 190px;
+  padding: 20px 0px;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.header_btns a h4 {
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.header_btns {
+  display: flex;
+  gap: 40px;
+}
+
+.btn_icon {
+  display: flex;
+}
+
+.btn_one a {
+  background: #ffcc00;
+  border: 1px solid #ffcc00;
+  transition: 0.2s;
+}
+.btn_two a {
+  border: 1px solid #000000;
+  transition: 0.2s;
+}
+.btn_one h4 {
+  color: #ffffff;
+}
+.btn_two h4 {
+  color: #353535;
+}
+.btn_one a:hover {
+  border: 1px solid #353535;
+  background: #353535;
+}
+
+.btn_one a:hover h4 {
+  color: #ffffff;
+}
+
+.btn_one a:hover .btn_icon svg path {
+  stroke: #ffffff;
+}
+
+.btn_one a:hover .btn_icon {
+  animation: up_to_right alternate-reverse infinite 1s;
+}
+
+@keyframes up_to_right {
+  0% {
+    transform: translateX(-5px) translateY(5px);
+  }
+  100% {
+    transform: translateX(5px) translateY(-5px);
+  }
+}
+
+.social_link a:hover i {
+  color: #ffffff;
+}
+.social_link a i {
+  color: #000000;
+  transition: 0.3s;
+}
+.social_link a:hover {
+  background: #484848;
+}
+.hero_left {
+  padding: 40px 0px;
+}
+
+.hero_img,
+.hero_right {
+  display: flex;
+  justify-content: flex-end;
+}
+.hero_img img {
+  object-fit: cover;
+}
+.hero_right {
+  position: relative;
+}
+
+.name_s h4 {
+  font-weight: 700;
+  font-size: 12px;
+  color: #353535;
+}
+
+.position_s h6 {
+  font-weight: 500;
+  font-size: 8px;
+  color: #7a7a7a;
+}
+
+.figCapTwo .profile_img_s img {
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+}
+.position_s {
+  padding-top: 5px;
+}
+
+.projects_s {
+  padding-top: 10px;
+}
+.S_two_links {
+  display: none;
+}
+.S_one_links {
+  display: flex;
+}
+
+.go_down {
+  border: 3px solid #686868;
+  position: absolute;
+  width: 25px;
+  height: 40px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+}
+
+.moving_line {
+  width: 3px;
+  height: 10px;
+  background: #686868;
+  border-radius: 50px;
+  top: 15%;
+  position: absolute;
+  animation: up-down infinite 0.8s alternate-reverse;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+    height: 10px;
+  }
+  100% {
+    transform: translateY(0px);
+    height: 5px;
+  }
+}
+/* =========== Responsive Css starts========== */
+@media only screen and (max-width: 1085px) {
+  .hero_section .hero_content {
+    display: block;
+  }
+  .hero_left,
+  .hero_right {
+    width: 100%;
+  }
+  .hero_img,
+  .hero_right {
+    position: relative;
+    justify-content: center;
+  }
+  .hero_section {
+    padding-top: 20px;
+    padding-bottom: 100px;
+  }
+  .S_two_links {
+    display: flex;
+  }
+  .S_one_links {
+    display: none;
+  }
+  .go_down {
+    display: none;
+  }
+}
+@media only screen and (max-width: 566px) {
+  .header_btns {
+    display: grid;
+    gap: 25px;
+  }
+  .social_links {
+    display: grid;
+    align-items: center;
+    padding-top: 60px;
+    gap: 10px;
+  }
+  .title_two h1 {
+    font-size: 40px;
+    line-height: 50px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .title_one h4 {
+    font-size: 18px;
+  }
+  .my_desc p {
+    font-size: 16px;
+    padding-bottom: 40px;
+  }
+  .my_desc p {
+    padding-bottom: 40px;
+  }
+  .S_one_links {
+    display: none;
+  }
+}
+
+/* =========== Responsive Css Ends========== */

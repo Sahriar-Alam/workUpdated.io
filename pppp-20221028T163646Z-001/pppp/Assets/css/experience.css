@@ -1,0 +1,142 @@
+.experience_area_s {
+  min-height: 100vh;
+  width: 100%;
+  transition: all 0.3s ease;
+  padding: 100px 0px;
+}
+.experience_timeline_s {
+  display: flex;
+  width: 100%;
+  gap: 60px;
+}
+
+.experience_right_S,
+.experience_left_s {
+  width: 45%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.main_title_s h2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 65px;
+  text-align: center;
+  color: #353535;
+  padding-bottom: 100px;
+}
+
+.ex_title_s h3 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #353535;
+  line-height: 180%;
+}
+
+.ex_date h5 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #7a7a7a;
+  line-height: 180%;
+}
+
+.ex_desc p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 200.5%;
+  color: #7a7a7a;
+  padding-bottom: 35px;
+}
+.ex_timeline_box:last-child .ex_desc p {
+  padding: 0;
+}
+.timeline_s {
+  width: 0px;
+  height: 100%;
+  border-left: 2px dashed #7a7a7a;
+  position: absolute;
+  left: -30px;
+}
+
+.ex_timeline_box {
+  position: relative;
+}
+
+.timeline_circle {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px dashed #7a7a7a;
+  background: #ffffff;
+  left: -21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -2px;
+}
+.ex_timeline_box:hover .timeline_circle {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.ex_timeline_box:last-child .timeline_s:after {
+  content: "";
+  position: absolute;
+  left: -2.5px;
+  bottom: 0px;
+  height: 36px;
+  width: 2px;
+  background: #ffffff;
+}
+
+.timeline_circle:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  border-radius: 100%;
+}
+.ex_timeline_box:first-child .timeline_circle:before {
+  background: #52ab70;
+}
+.ex_timeline_box:nth-child(2) .timeline_circle:before {
+  background: #f17676;
+}
+.ex_timeline_box:last-child .timeline_circle:before {
+  background: #ffd233;
+}
+
+/* =========== Responsive Css Starts ========== */
+@media only screen and (min-width: 766px) {
+  .timeline_s {
+    left: -55px;
+  }
+}
+@media only screen and (max-width: 566px) {
+  .experience_left_s .ex_left_box {
+    text-align: right;
+  }
+  .ex_title_s h3 {
+    font-size: 18px;
+  }
+  .ex_date h5 {
+    font-size: 15px;
+  }
+  .ex_desc p {
+    font-size: 16px;
+  }
+  .main_title_s h2 {
+    font-size: 35px;
+    line-height: 50px;
+    padding-bottom: 55px;
+  }
+}
+/* =========== Responsive Css ends ========== */

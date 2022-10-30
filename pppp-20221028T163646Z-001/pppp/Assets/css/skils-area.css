@@ -1,0 +1,368 @@
+/* Tabs Start */
+.ease {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.tabs {
+  background: #fff;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tabs > input,
+.tabs > span {
+  width: 20%;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+}
+
+.tabs > input {
+  cursor: pointer;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+.tabs > span {
+  background: #f0f0f0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tabs > span i,
+.tabs > span {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.tabs > input:hover + span {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tabs > input:checked + span {
+  background: #fff;
+}
+
+.tabs > input:checked + span,
+.tabs > input:hover + span {
+  color: #3498db;
+}
+
+#tab-1,
+#tab-1 + span {
+  left: 0;
+}
+
+#tab-5,
+#tab-5 + span {
+  left: 20%;
+}
+
+.tab-content {
+  width: 100%;
+  min-height: 340px;
+  position: relative;
+}
+
+.tab-content .tab_items {
+  width: 100%;
+  position: absolute;
+  left: 40px;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tab-content .tab_items h1 {
+  margin-top: 15px;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+}
+
+#tab-1:checked ~ .tab-content #tab-item-1 {
+  left: 0 !important;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+
+#tab-5:checked ~ .tab-content #tab-item-5 {
+  left: 0px !important;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+  height: 100%;
+}
+#tab-1 ~ .tab-content .tab_items {
+  left: 20px !important;
+  transition: 0.3s;
+}
+
+#tab-1:checked ~ .tab-content .tab_items {
+  position: absolute;
+  left: 0px;
+}
+
+/* effect-1 */
+
+.effect-1 > input:checked + span {
+  background: #fff;
+}
+/* skill-area styles */
+.skils_area_s {
+  padding: 0px 0px 140px 0px;
+  overflow: hidden;
+}
+
+.skils_contents {
+  display: flex;
+  width: 100%;
+  gap: 50px;
+}
+
+.skils_left {
+  width: 50%;
+}
+
+.skils_right {
+  width: 50%;
+}
+
+/* progress bar */
+.progressbar {
+  width: 100%;
+  height: 8px;
+  background: #d9d9d9;
+  border-radius: 50px;
+  position: relative;
+}
+.progressName h3 {
+  font-weight: 600;
+  font-size: 18px;
+  color: #353535;
+  padding-bottom: 18px;
+}
+
+.progress_boxes:not(.progress_boxes:last-child) {
+  padding-bottom: 50px;
+}
+#tab-1 ~ .tab-content .progress {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+}
+
+#tab-1:checked
+  ~ .tab-content
+  #tab-item-1
+  .progress_boxes:first-child
+  .progress {
+  width: 85%;
+  background: #f16500;
+  transition: 0.2s all ease-in;
+}
+
+#tab-1:checked
+  ~ .tab-content
+  #tab-item-1
+  .progress_boxes:nth-child(2)
+  .progress {
+  width: 75%;
+  background: #03249b;
+  transition: 0.3s all ease-in;
+}
+
+#tab-1:checked
+  ~ .tab-content
+  #tab-item-1
+  .progress_boxes:nth-child(3)
+  .progress {
+  width: 80%;
+  background: #700d60;
+  transition: 0.4s all ease-in;
+}
+
+#tab-1:checked ~ .tab-content #tab-item-1 .progress_boxes:last-child .progress {
+  width: 70%;
+  background: #234bda;
+  transition: 0.5s all ease-in;
+}
+.progress:after {
+  content: "87%";
+  position: absolute;
+  top: -40px;
+  font-weight: 400;
+  font-size: 18px;
+  right: 0;
+}
+.progress_boxes:first-child .progress:after,
+.progress_boxes:first-child .progressName h3 {
+  content: "80%";
+  color: #f16500;
+}
+.progress_boxes:nth-child(2) .progress:after,
+.progress_boxes:nth-child(2) .progressName h3 {
+  content: "75%";
+  color: #03249b;
+}
+.progress_boxes:nth-child(3) .progress:after,
+.progress_boxes:nth-child(3) .progressName h3 {
+  content: "80%";
+  color: #700d60;
+}
+.progress_boxes:last-child .progress:after,
+.progress_boxes:last-child .progressName h3 {
+  content: "70%";
+  color: #234bda;
+}
+
+#tab-1 ~ .tab-content #tab-item-1 .progress_boxes .progress {
+  width: 10%;
+}
+#tab-1,
+#tab-1 + span,
+#tab-5 + span {
+  left: 0%;
+  width: 174px;
+  background: #ffffff;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #353535;
+}
+#tab-1,
+#tab-1:checked + span,
+#tab-5:checked + span {
+  border: 1px solid #000000;
+  background: #ffffff;
+}
+
+#tab-5,
+#tab-5 + span {
+  left: calc(3% + 174px);
+  width: 174px;
+}
+
+#tab-item-5,
+#tab-item-1 {
+  padding-top: 100px;
+}
+
+.ed_date_s h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: blue;
+}
+
+.ed_versity_s h4 {
+  font-size: 20px;
+  font-weight: 400;
+  color: #353535;
+}
+
+.course_name_s h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #353535;
+}
+
+.ed_versity_s {
+  padding: 10px 0px 30px 0px;
+}
+
+.course_name_s:after {
+  width: 30px;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background: #353535;
+  top: -10px;
+}
+.course_name_s {
+  position: relative;
+}
+.skill_education {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 20px;
+}
+.skils_area_s .my_desc p {
+  padding-bottom: 0;
+}
+.skils_area_s .my_desc p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #7a7a7a;
+}
+
+.skils_area_s .my_desc p:nth-child(1) {
+  padding-bottom: 35px;
+}
+
+.skils_area_s .my_desc {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.skils_area_s .section_contents_s .btn_two a {
+  gap: 10px;
+  background: #ffcc00;
+  border: 1px solid #ffcc00;
+}
+.section_contents_s .btn_two a .btn_icon svg path,
+.section_contents_s .btn_two a h4 {
+  stroke: #ffffff;
+}
+.skils_area_s .section_contents_s .btn_two a h4 {
+  font-weight: 500;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 1082px) {
+  .skils_contents {
+    display: grid;
+  }
+  .skils_right,
+  .skils_left {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 499px) {
+  #tab-1,
+  #tab-1 + span,
+  #tab-5 + span {
+    width: 120px;
+    font-size: 14px;
+  }
+  #tab-5,
+  #tab-5 + span {
+    left: calc(3% + 120px);
+    width: 120px;
+  }
+  .tabs > input,
+  .tabs > span {
+    height: 50px;
+    line-height: 48px;
+  }
+  .course_name_s h2 {
+    font-size: 20px;
+  }
+  .ed_date_s h4 {
+    font-size: 16px;
+  }
+  .ed_versity_s h4 {
+    font-size: 15px;
+  }
+}

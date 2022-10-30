@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #7a7a7a;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  color: #353535;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a,
+span,
+i {
+  display: inline-block;
+}
+.container {
+  max-width: 1132px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+/*header css start*/
+ header {
+  height: 60px;
+}
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding-right: 0;
+}
+/* menu btn  */
+
+#check {
+  background-color: #000000;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.menu_btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  float: right;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.menu_btn:hover {
+  transform: translateY(-2px);
+}
+
+.menu_btn span {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.menu_btn span::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.menu_btn span::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.menu_btn:hover span::after,
+.menu_btn:hover span::before {
+  width: 100%;
+}
+
+.logo {
+  height: 23px;
+}
+.logo img {
+  height: 100%;
+}
+.menu_bar {
+  display: flex;
+}
+.menu_bar li a {
+  position: relative;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+color: #353535;
+}
+.menu_bar li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #353535;
+  height: 1px;
+  width: 0%;
+  transition: 0.2s;
+}
+.menu_bar li a:hover:before {
+  width: 100%;
+}
+.menu_bar .active_menu a::before {
+  width: 100%;
+}
+
+/*************** 
+/*header css end*/
+
+/* about banner  start*/
+.about-me-banner .banner-content-inner {
+  padding: 40px 30px 45px;
+  background-image: url("../images/about/about-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.about-me-banner .about-title {
+  position: relative;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.about-me-banner .about-title img {
+  position: absolute;
+  top: -10px;
+  margin-left: -10px;
+}
+
+.about-me-banner .about-desc {
+  display: inline-block;
+  position: relative;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.about-me-banner .about-desc::before,
+.about-me-banner .about-desc::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 84px;
+  height: 2px;
+  background: #fff;
+}
+
+.about-me-banner .about-desc::before {
+  right: 102%;
+}
+
+.about-me-banner .about-desc::after {
+  left: 102%;
+}
+/* about banner end*/
+/*======================*/
+/* about me bio start */
+
+.about-me-bio .about-bio-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 65px;
+  padding-top: 80px;
+  border-bottom: 0.7px solid #7a7a7a;
+}
+
+.about-me-bio .bio-left {
+  width: 36.48%;
+}
+.about-me-bio .bio-left img {
+  width: 100%;
+}
+
+.about-me-bio .bio-right {
+  width: 63.52%;
+  padding-left: 30px;
+}
+
+.about-me-bio .bio-right .bio-desc {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 38px;
+  color: #7a7a7a;
+  margin-bottom: 80px;
+}
+
+.about-me-bio .bio-right .person-info {
+  display: flex;
+  gap: 55px;
+}
+
+.about-me-bio .bio-right .person-info-box .person-info-item {
+  margin-bottom: 20px;
+}
+
+.about-me-bio .bio-right .person-info-box .person-info-item .info-title {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.2;
+}
+.about-me-bio .bio-right .person-info-box .person-info-item .info-desc {
+  font-size: 19px;
+  line-height: 1.2;
+  color: #353535;
+  font-weight: 500;
+  margin-left: 15px;
+}
+.about-me-bio .bio-right .person-info-box .person-info-item .info-desc.link {
+  color: #3479ff;
+  text-decoration: underline;
+}
+
+.about-me-bio .bio-right .download-btn {
+  display: inline-flex;
+
+  align-items: center;
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #ffffff;
+  background: #ffcc00;
+  border-radius: 12px;
+  line-height: 50px;
+  padding: 0 21px;
+  transition: 0.3s;
+}
+
+.about-me-bio .bio-right .download-btn:hover {
+  box-shadow: 0 5px 10px #ffcc005c;
+}
+
+.about-me-bio .bio-right .download-btn img {
+  margin-left: 10px;
+}
+
+/* about me bio end */
+/*======================*/
+/* timeline  start */
+.about-timeline {
+  padding: 80px 0;
+}
+.about-timeline .timeline-content-wrapper {
+  display: flex;
+}
+.about-timeline .timeline-item-container {
+  width: 50%;
+}
+.about-timeline .timeline-left {
+  padding-right: 25px;
+}
+.about-timeline .timeline-right {
+  padding-left: 25px;
+}
+
+.about-timeline .timeline-item-wrapper {
+  position: relative;
+  padding-left: 75px;
+}
+.about-timeline .timeline-item-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  width: 0;
+  border-left: 2px dashed #7a7a7a;
+}
+
+.about-timeline .timeline-item-container .timeline-heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #353535;
+  margin-bottom: 35px;
+}
+.about-timeline .timeline-item-wrapper .timeline-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding: 10px 0;
+}
+.about-timeline .timeline-item-wrapper .timeline-item .tl-dot-wrap {
+  position: absolute;
+  top: 5px;
+  left: -64px;
+  transform: translateX(-50%);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 2px dashed #7a7a7a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #fff;
+}
+.about-timeline .timeline-item-wrapper .timeline-item .tl-dot-wrap .tl-dot {
+  content: "";
+  background: #52ab70;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+}
+.about-timeline .timeline-item-wrapper .timeline-item.red .tl-dot-wrap .tl-dot {
+  background: #f17676;
+}
+.about-timeline
+  .timeline-item-wrapper
+  .timeline-item.yellow
+  .tl-dot-wrap
+  .tl-dot {
+  background: #ffd233;
+}
+
+.about-timeline .timeline-item-wrapper .timeline-item .tl-date {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 190%;
+  color: #7a7a7a;
+}
+
+.about-timeline .timeline-item-wrapper .timeline-item .tl-date img {
+  margin-right: 10px;
+}
+
+.about-timeline .timeline-item-wrapper .timeline-item .tl-item-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #353535;
+  margin: 15px 0;
+}
+
+.about-timeline .timeline-item-wrapper .timeline-item .tl-item-desc {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2;
+  color: #7a7a7a;
+}
+/* timeline  end */
+/* ========================== */
+/* skill start  */
+.skill-area {
+  padding-top: 10px;
+  padding-bottom: 115px;
+}
+
+.skill-area .section-heading {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #353535;
+  margin-bottom: 35px;
+}
+.skill-area .progress-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.skill-area .progress-item {
+  min-width: 355px;
+  margin-bottom: 30px;
+}
+
+.skill-area .progress-item .progress-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-area .progress-item .progress-desc .progress-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 180%;
+  color: #353535;
+}
+.skill-area .progress-item .progress-desc .progress-value {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 180%;
+  color: #f16500;
+  margin-right: 20px;
+}
+
+.skill-area .progress-item .progress-bar {
+  position: relative;
+  height: 4px;
+  border-radius: 20px;
+  margin-top: 15px;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+.skill-area .progress-item .progress-bar .progress-line {
+  background: #f16500;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.skill-area .progress-item.color-2 .progress-desc .progress-value {
+  color: #700d60;
+}
+
+.skill-area .progress-item.color-2 .progress-bar .progress-line {
+  background: #700d60;
+  width: 80%;
+}
+
+.skill-area .progress-item.color-3 .progress-desc .progress-value {
+  color: #efc003;
+}
+
+.skill-area .progress-item.color-3 .progress-bar .progress-line {
+  background: #efc003;
+  width: 85%;
+}
+
+.skill-area .progress-item.color-4 .progress-desc .progress-value {
+  color: #03249b;
+}
+
+.skill-area .progress-item.color-4 .progress-bar .progress-line {
+  background: #03249b;
+}
+
+/* skill end  */

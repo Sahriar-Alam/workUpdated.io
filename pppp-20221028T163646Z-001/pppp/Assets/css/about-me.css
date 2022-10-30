@@ -1,0 +1,166 @@
+.about_area_s {
+  background: linear-gradient(95.13deg, #ffcc00 -21.46%, #fff5cb 112.13%);
+  position: relative;
+  display: flex;
+}
+.about_contents_s {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+}
+.about_left_s,
+.about_right_s {
+  width: 50%;
+}
+.about_img {
+  display: flex;
+}
+.about_right_s .my_desc p {
+  padding-bottom: 50px;
+  padding-top: 35px;
+}
+.section_title_s h2 {
+  font-weight: 700;
+  font-size: 50px;
+  color: #353535;
+  line-height: 100%;
+}
+
+.about_right_s .btn_two a:hover {
+  background: #353535;
+}
+
+.about_right_s .btn_two a:hover h4 {
+  color: #ffffff;
+}
+
+.about_right_s {
+  display: flex;
+  align-items: center;
+}
+.bubble {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  overflow: hidden;
+}
+
+.bubble span {
+  background: linear-gradient(
+    180deg,
+    #52ab70 0%,
+    rgba(82, 171, 112, 0.48) 100%
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -105px;
+}
+.about_left_s {
+  position: relative;
+}
+.anim_s img {
+  width: 100%;
+  object-fit: none;
+}
+
+.anim_s {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.about_anim1 {
+  top: 20%;
+  left: 12%;
+}
+.about_img img {
+  z-index: 99;
+}
+.about_anim1 img {
+  animation: infinite 1s anim_round;
+}
+@keyframes anim_round {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.about_anim2 {
+  bottom: 20%;
+}
+.about_anim2 img {
+  animation: alternate-reverse infinite 1s anim_left_right;
+}
+@keyframes anim_left_right {
+  0% {
+    transform: scale3d(0);
+  }
+  100% {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+
+/* =========== Responsive Css Starts========== */
+@media only screen and (max-width: 1085px) {
+  .about_left_s {
+    transform: rotateY(180deg);
+  }
+  .about_contents_s {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .about_area_s {
+    padding-top: 100px;
+  }
+  .anim_s {
+    z-index: -1;
+  }
+  .about_left_s,
+  .about_right_s {
+    width: 100%;
+  }
+  .bubble {
+    left: 30px;
+    right: auto;
+  }
+  .about_img img {
+    width: 50%;
+  }
+  .about_anim1 {
+    top: 20%;
+    left: 2%;
+  }
+}
+@media only screen and (max-width: 667px) {
+  .about_img img {
+    width: 100%;
+  }
+  .bubble {
+    display: none;
+  }
+  .about_anim2 {
+    bottom: 30%;
+    left: 5%;
+  }
+  .about_anim3 {
+    display: none;
+  }
+  .about_right_s .my_desc p {
+    padding-bottom: 35px;
+    padding-top: 25px;
+  }
+}
+@media only screen and (max-width: 499px) {
+  .section_title_s h2 {
+    font-size: 35px;
+  }
+}
+
+/* =========== Responsive Css Ends========== */
